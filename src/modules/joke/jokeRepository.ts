@@ -1,9 +1,9 @@
 import { Joke } from "../../models/Joke";
 
 export const jokeRepository = {
-	addJoke: async (content: string) => {
+	addJoke: async (newJoke: { question: string; answer: string }) => {
 		try {
-			const joke = await Joke.create({ content });
+			const joke = await Joke.create(newJoke);
 			return joke;
 		} catch (error) {
 			throw new Error("Error while adding the joke");

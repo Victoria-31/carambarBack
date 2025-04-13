@@ -19,8 +19,8 @@ const Joke = sequelize.define(
 		},
 	},
 	{
-		tableName: "joke", // Spécifie le nom exact de la table (singulier)
-		timestamps: false, // Désactive les colonnes createdAt et updatedAt
+		tableName: "joke",
+		timestamps: false,
 	},
 );
 
