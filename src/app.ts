@@ -17,21 +17,18 @@ const app = express();
 // You should NOT do that: such code uses the `cors` module to allow all origins, which can pose security issues.
 // For this pedagogical template, the CORS code allows CLIENT_URL in development mode (when process.env.CLIENT_URL is defined).
 
+// if (process.env.CLIENT_URL != null) {
+// 	app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
+// }
+
 import cors from "cors";
 
-if (process.env.CLIENT_URL != null) {
-	app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
-}
+const allowedOrigins = [
+	process.env.LOCAL_CLIENT_URL,
+	process.env.DISTANT_CLIENT_URL,
+].filter((origin): origin is string => Boolean(origin));
 
-// If you need to allow extra origins, you can add something like this:
-
-/*
-app.use(
-  cors({
-    origin: ["http://mysite.com", "http://another-domain.com"],
-  }),
-);
-*/
+app.use(cors({ origin: allowedOrigins }));
 
 // Request parsing is necessary to extract data sent by the client in an HTTP request.
 // For example to access the body of a POST request.
