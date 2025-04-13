@@ -20,6 +20,7 @@ const app = express();
 // if (process.env.CLIENT_URL != null) {
 // 	app.use(cors({ origin: [process.env.CLIENT_URL], credentials: true }));
 // }
+import "dotenv/config";
 
 import cors from "cors";
 
