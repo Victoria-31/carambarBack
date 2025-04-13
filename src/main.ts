@@ -4,7 +4,7 @@ import { checkConnection } from "./database/checkConnection";
 
 import app from "./app";
 
-const port = process.env.APP_PORT;
+const port = process.env.PORT;
 
 checkConnection();
 
