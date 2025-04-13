@@ -26,10 +26,10 @@ import cors from "cors";
 
 const allowedOrigins = [
 	process.env.LOCAL_CLIENT_URL,
-	"https://victoria-31.github.io/carambarFront/",
+	"https://victoria-31.github.io/carambarFront",
 ].filter((origin): origin is string => Boolean(origin));
 
-app.use(cors({ origin: allowedOrigins }));
+app.use(cors({ origin: true }));
 
 // Request parsing is necessary to extract data sent by the client in an HTTP request.
 // For example to access the body of a POST request.
