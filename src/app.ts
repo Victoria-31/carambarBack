@@ -29,7 +29,7 @@ const allowedOrigins = [
 	"https://victoria-31.github.io/carambarFront",
 ].filter((origin): origin is string => Boolean(origin));
 
-app.use(cors({ origin: true }));
+app.use(cors({ origin: allowedOrigins }));
 
 // Request parsing is necessary to extract data sent by the client in an HTTP request.
 // For example to access the body of a POST request.
