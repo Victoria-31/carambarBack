@@ -7,6 +7,6 @@ const router = express.Router();
 
 import jokeActions from "./modules/joke/jokeActions";
 
-router.get("/jokes", jokeActions.browse);
+router.get("/api/jokes", jokeActions.browse);
 
 export default router;
