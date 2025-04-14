@@ -1,9 +1,27 @@
 // Load the express module to create a web application
 import express from "express";
+import swaggerUi from "swagger-ui-express";
+import swaggerJSDoc from "swagger-jsdoc";
 
 const app = express();
 
 // Configure it
+
+const swaggerOptions = {
+	definition: {
+		openapi: "3.0.0",
+		info: {
+			title: "API Carambar",
+			version: "1.0.0",
+			description: "Une API sur les blagues carambars",
+		},
+	},
+	apis: ["./src/router.ts"],
+};
+
+const swaggerSpec = swaggerJSDoc(swaggerOptions);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 /* ************************************************************************* */
 

@@ -22,6 +22,7 @@ sequelize
 app
 	.listen(port, () => {
 		console.info(`Server is listening on port ${port}`);
+		console.log(`Swagger docs dispo sur http://localhost:${port}/api-docs`);
 	})
 	.on("error", (err: Error) => {
 		console.error("Error:", err.message);
