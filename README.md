@@ -19,11 +19,27 @@ This project was created as part of a technical test for a web development schoo
   🎯 [Frontend](https://victoria-31.github.io/carambarFront/)
 - Deployed on Render
 
+
 ###################################################################
 
 📁 **Project Structure**
+..
+├── bin/
+│   └── migrate.ts                # Script to initialize the database
+├── src/
+│   ├── database/
+│   │   ├── db.ts                 # Sequelize + SQLite setup
+│   │   └── checkConnection.ts    # Database connection check
+│   ├── models/
+│   │   └── joke.ts               # Joke model
+│   ├── modules/
+│   │   └── joke/
+│   │       ├── jokeActions.ts    # CRUD and logic
+│   │       └── jokeRepository.ts # Data access logic
+│   ├── router.ts                 # Routes
+│   ├── app.ts                    # Express config (CORS, Swagger, etc.)
+│   ├── main.ts                   # Entry point of the server
 
-├── bin/ │ └── migrate.ts # Script to initialize the database ├── src/ │ ├── database/ │ │ ├── db.ts # Sequelize + SQLite setup │ │ └── checkConnection.ts # Database connection check │ ├── models/ │ │ └── joke.ts # Joke model │ ├── modules/ │ │ └── joke/ │ │ ├── jokeActions.ts # CRUD and logic │ │ └── jokeRepository.ts # Data access logic │ ├── router.ts # Routes │ ├── app.ts # Express config (CORS, Swagger, etc.) │ ├── main.ts # Entry point of the server
 
 ###################################################################
 
