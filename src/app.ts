@@ -16,7 +16,7 @@ const swaggerOptions = {
 			description: "Une API sur les blagues carambars",
 		},
 	},
-	apis: ["./src/router.ts"],
+	apis: [path.join(__dirname, "**/*.ts")],
 };
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
