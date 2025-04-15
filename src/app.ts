@@ -45,7 +45,7 @@ import cors from "cors";
 
 const allowedOrigins = [
 	process.env.LOCAL_CLIENT_URL,
-	"https://victoria-31.github.io/carambarFront",
+	"https://victoria-31.github.io",
 ].filter((origin): origin is string => Boolean(origin));
 
 app.use(cors({ origin: allowedOrigins }));
