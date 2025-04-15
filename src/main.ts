@@ -11,7 +11,7 @@ checkConnection();
 import { sequelize } from "./database/db";
 
 sequelize
-	.sync({ force: true })
+	.sync({ force: false })
 	.then(() => {
 		console.log("Tables synced");
 	})
