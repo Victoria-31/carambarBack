@@ -23,7 +23,9 @@ This project was created as part of a technical test for a web development schoo
 ###################################################################
 
 📁 **Project Structure**
-..
+```plaintext
+
+
 ├── bin/
 │   └── migrate.ts                # Script to initialize the database
 ├── src/
@@ -40,6 +42,7 @@ This project was created as part of a technical test for a web development schoo
 │   ├── app.ts                    # Express config (CORS, Swagger, etc.)
 │   ├── main.ts                   # Entry point of the server
 
+```
 
 ###################################################################
 
